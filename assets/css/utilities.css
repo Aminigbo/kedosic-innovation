@@ -1,0 +1,649 @@
+/* background-color: #010327*/
+/*************************** start of  smaller screen*******************/
+@media only screen and (max-width: 690px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+  /** SITE HEADER START ***/
+  .site-header {
+    width: 100%;
+    height: 60px;
+    background-color: #e8e8e8;
+    transition: 0.5s ease;
+    z-index: 1000;
+  }
+
+  .site-header.is-showing {
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+
+  .site-header .logo-img {
+    position: relative;
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .site-header ul {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 80%;
+    height: calc(100vh - 60px);
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .site-header ul.sidebaropen {
+    animation: sidebaropen 0.5s ease;
+  }
+  .site-header ul.sidebarclose {
+    animation: sidebarclose 0.5s ease;
+  }
+  @keyframes sidebaropen {
+    from {
+      right: -100%;
+    }
+
+    to {
+      right: 0%;
+    }
+  }
+
+  @keyframes sidebarclose {
+    from {
+      right: 0%;
+    }
+
+    to {
+      right: -100%;
+    }
+  }
+
+  .site-header ul li {
+    display: block;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .site-header ul li a {
+    padding: 10px 20px;
+    color: #1d76bc;
+    text-decoration: none;
+  }
+
+  .site-header ul li a.check-status-btn {
+    background-color: #1d76bc;
+    color: white;
+    border-radius: 6px;
+  }
+
+  .site-header .hamburger {
+    float: right;
+    margin-top: 20px;
+    margin-right: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    /* border: 1px solid #1d76bc; */
+    color: #1d76bc;
+  }
+  /*** SITE HEADER END ***/
+
+  /*** SITE FOOTER  START ***/
+  .site-footer {
+    width: 100%;
+    background-color: #202020;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .site-footer .footer-top {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px 20px;
+  }
+
+  .site-footer .footer-top .row1 {
+    width: 100%;
+    /* height: 200px; */
+    background-color: ;
+    margin-bottom: 20px;
+  }
+
+  .site-footer .footer-top .row1 .site-logo {
+    width: 130px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .site-footer .footer-top .row1 p {
+    font-size: 15px;
+    color: white;
+    max-width: 70%;
+  }
+
+  .site-footer .footer-top .row1 p.copy-right {
+    font-size: 15px;
+    color: white;
+    opacity: 0.8;
+    margin-top: 15px;
+  }
+  .site-footer .footer-top .row2 {
+    width: 100%;
+    /* height: 200px; */
+    background-color: ;
+    margin-bottom: 20px;
+  }
+
+  .site-footer .footer-top .row2 ul li {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: -40px;
+  }
+
+  .site-footer .footer-top .row2 ul li.title {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+  }
+
+  .site-footer .footer-top .row2 ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  .site-footer .footer-top .row3 {
+    width: 100%;
+    /* height: 200px; */
+    background-color: ;
+    margin-bottom: 20px;
+  }
+
+  .site-footer .footer-top .row3 .title {
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .site-footer .footer-top .row3 p {
+    font-size: 15px;
+    color: white;
+    max-width: 80%;
+  }
+
+  .site-footer .footer-top .row4 {
+    width: 100%;
+    /* height: 200px; */
+    background-color: ;
+  }
+
+  .site-footer .footer-top .row4 ul li {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: -40px;
+  }
+
+  .site-footer .footer-top .row4 ul li.title {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+  }
+
+  .site-footer .footer-top .row4 ul li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .site-footer .footer-top .row4 .icons-container {
+    width: 100%;
+    margin-left: -40px;
+  }
+
+  .site-footer .footer-top .row4 .icons-container .icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    border: none;
+    font-size: 20px;
+  }
+
+  .site-footer .footer-bottom {
+    width: 100%;
+    text-align: center;
+    padding: 10px 10px;
+    font-size: 16px;
+    color: grey;
+    background-color: white;
+  }
+
+  .site-footer .footer-bottom i {
+    color: crimson;
+  }
+
+  .site-footer .footer-bottom a {
+    color: royalblue;
+    text-decoration: none;
+  }
+  /*** SITE FOOTER END ***/
+
+  /*** FORM COMPONENT START ***/
+  .form-component {
+    width: 100%;
+    background-color: #e8e8e8;
+    padding: 30px 0px;
+  }
+
+  .form-component .form {
+    width: 100%;
+
+    background-color: white;
+    padding: 20px 10px;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .form-component .form .row1 {
+    width: 100%;
+    background-color: ;
+    padding: 10px;
+    display: none;
+  }
+
+  .form-component .form .row1 img {
+    width: 80%;
+    height: auto;
+  }
+
+  .form-component .form .row2 {
+    width: 100%;
+    background-color: ;
+    padding: 10px;
+  }
+
+  .form-component .form .row2 .title {
+    width: 100%;
+    font-size: 20px;
+    color: #111;
+    font-weight: bold;
+  }
+
+  .form-component .form .row2 .steps {
+    width: 100%;
+    font-size: 15px;
+    color: grey;
+    margin-bottom: 15px;
+  }
+
+  .form-component .form .row2 label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 0px;
+    color: #1d76bc;
+  }
+
+  .form-component .form .row2 .field {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    margin-bottom: 15px;
+  }
+
+  .form-component .form .row2 .textarea-field {
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    margin-bottom: 15px;
+  }
+
+  .form-component .form .row2 .btns-container {
+    width: 100%;
+    height: 50px;
+  }
+
+  .form-component .form .row2 .btns-container .next-btn {
+    padding: 5px 30px;
+    border: none;
+    background-color: #1d76bc;
+    color: white;
+    border-radius: 3px;
+    float: right;
+    display: block;
+  }
+
+  .form-component .form .row2 .btns-container .submit-btn {
+    padding: 5px 30px;
+    border: none;
+    background-color: #1d76bc;
+    color: white;
+    border-radius: 3px;
+    display: block;
+    float: right;
+  }
+
+  .form-component .form .row2 .btns-container .cancel-btn {
+    padding: 5px 30px;
+    border: none;
+    background-color: white;
+    color: red;
+    border-radius: 3px;
+    float: right;
+    text-decoration: none;
+  }
+  /*** FORM COMPONENT END ***/
+}
+
+/** ********************end of smaller screen********************** **/
+/********/
+/********/
+/********/
+/********/
+/********/
+/********/
+/********/
+/** *******************start of bigger screen************************/
+@media only screen and (min-width: 690px) {
+  .hide-on-desktop {
+    display: none !important;
+  }
+  /** SITE HEADER START ***/
+  .site-header {
+    width: 100%;
+    height: 70px;
+    background-color: #e8e8e8;
+    transition: 0.5s ease;
+  }
+
+  .site-header.is-showing {
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+
+  .site-header .logo-img {
+    position: relative;
+    width: 100px;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .site-header ul {
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+
+  .site-header ul li {
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 15px;
+  }
+
+  .site-header ul li a {
+    padding: 10px 20px;
+    color: #1d76bc;
+    text-decoration: none;
+  }
+
+  .site-header ul li a.check-status-btn {
+    background-color: #1d76bc;
+    color: white;
+    border-radius: 6px;
+  }
+
+  /*** SITE HEADER END ***/
+
+  /*** SITE FOOTER  START ***/
+  .site-footer {
+    width: 100%;
+    background-color: #202020;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .site-footer .footer-top {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 30px 50px;
+  }
+
+  .site-footer .footer-top .row1 {
+    width: 25%;
+    /* height: 200px; */
+    background-color: ;
+  }
+
+  .site-footer .footer-top .row1 .site-logo {
+    width: 130px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .site-footer .footer-top .row1 p {
+    font-size: 15px;
+    color: white;
+  }
+
+  .site-footer .footer-top .row1 p.copy-right {
+    font-size: 15px;
+    color: white;
+    opacity: 0.8;
+    margin-top: 15px;
+  }
+  .site-footer .footer-top .row2 {
+    width: 20%;
+    /* height: 200px; */
+    background-color: ;
+  }
+
+  .site-footer .footer-top .row2 ul li {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .site-footer .footer-top .row2 ul li.title {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+  }
+
+  .site-footer .footer-top .row2 ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  .site-footer .footer-top .row3 {
+    width: 30%;
+    /* height: 200px; */
+    background-color: ;
+  }
+
+  .site-footer .footer-top .row3 .title {
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .site-footer .footer-top .row3 p {
+    font-size: 15px;
+    color: white;
+    max-width: 80%;
+  }
+
+  .site-footer .footer-top .row4 {
+    width: 25%;
+    /* height: 200px; */
+    background-color: ;
+  }
+
+  .site-footer .footer-top .row4 ul li {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .site-footer .footer-top .row4 ul li.title {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+  }
+
+  .site-footer .footer-top .row4 ul li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .site-footer .footer-top .row4 .icons-container {
+    width: 100%;
+  }
+
+  .site-footer .footer-top .row4 .icons-container .icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    border: none;
+    font-size: 20px;
+  }
+
+  .site-footer .footer-bottom {
+    width: 100%;
+    text-align: center;
+    padding: 10px 10px;
+    font-size: 16px;
+    color: grey;
+    background-color: white;
+  }
+
+  .site-footer .footer-bottom i {
+    color: crimson;
+  }
+
+  .site-footer .footer-bottom a {
+    color: royalblue;
+    text-decoration: none;
+  }
+  /*** SITE FOOTER END ***/
+
+  /*** FORM COMPONENT START ***/
+  .form-component {
+    width: 100%;
+    background-color: #e8e8e8;
+    padding: 30px 0px;
+  }
+
+  .form-component .form {
+    width: 100%;
+
+    background-color: white;
+    padding: 20px 50px;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .form-component .form .row1 {
+    width: 50%;
+    background-color: ;
+    padding: 10px;
+  }
+
+  .form-component .form .row1 img {
+    width: 80%;
+    height: auto;
+  }
+
+  .form-component .form .row2 {
+    width: 50%;
+    background-color: ;
+    padding: 10px;
+  }
+
+  .form-component .form .row2 .title {
+    width: 100%;
+    font-size: 20px;
+    color: #111;
+    font-weight: bold;
+  }
+
+  .form-component .form .row2 .steps {
+    width: 100%;
+    font-size: 15px;
+    color: grey;
+    margin-bottom: 15px;
+  }
+
+  .form-component .form .row2 label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 0px;
+    color: #1d76bc;
+  }
+
+  .form-component .form .row2 .field {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    margin-bottom: 15px;
+  }
+
+  .form-component .form .row2 .textarea-field {
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    margin-bottom: 15px;
+  }
+
+  .form-component .form .row2 .btns-container {
+    width: 100%;
+    height: 50px;
+  }
+
+  .form-component .form .row2 .btns-container .next-btn {
+    padding: 5px 30px;
+    border: none;
+    background-color: #1d76bc;
+    color: white;
+    border-radius: 3px;
+    float: right;
+    display: block;
+  }
+
+  .form-component .form .row2 .btns-container .submit-btn {
+    padding: 5px 30px;
+    border: none;
+    background-color: #1d76bc;
+    color: white;
+    border-radius: 3px;
+    display: block;
+    float: right;
+  }
+
+  .form-component .form .row2 .btns-container .cancel-btn {
+    padding: 5px 30px;
+    border: none;
+    background-color: white;
+    color: red;
+    border-radius: 3px;
+    float: right;
+    text-decoration: none;
+  }
+  /*** FORM COMPONENT END ***/
+}
+
+/** **************end of bigger screen************************ **/
+
+.centered-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
