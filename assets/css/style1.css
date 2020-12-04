@@ -150,6 +150,7 @@
     clip-path: polygon(35% 0%, 100% 100%, 0% 100%);
     position: relative;
     margin-top: -50px;
+    z-index: 250;
   }
 
   .home-page .triangle-container .triangle-pin {
@@ -159,6 +160,7 @@
     width: 100px;
     height: 200px;
     transform: rotate(-5deg);
+    z-index: 500;
   }
 
   .home-page .tips-container {
@@ -1042,6 +1044,135 @@
     height: 40px;
   }
   /*** SELECT CATEGORY PAGE END ***/
+
+  /*** HOW IT WORKS START ***/
+
+  .howitworks-page {
+    width: 100%;
+  }
+
+  .howitworks-page .hero {
+    width: 100%;
+    background-color: #eee;
+    height: 180px;
+    position: relative;
+    padding: 50px 10px;
+  }
+
+  .howitworks-page .hero .title {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #111;
+  }
+
+  .howitworks-page .hero .subtitle {
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    color: #111;
+  }
+
+  .howitworks-page .hero .pin-container {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    background-color: ;
+  }
+
+  .howitworks-page .hero .pin-container .pin {
+    width: 150px;
+    height: auto;
+    padding: 0px;
+    transform: rotate(15deg);
+    position: relative;
+    top: 32px;
+  }
+
+  .howitworks-page .phase {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px 10px;
+    /* background-color: #e8e8e8; */
+    background-color: #eee;
+    margin-bottom: 50px;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .howitworks-page .phase .phase-title {
+    width: 100%;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .howitworks-page .phase .phase-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .howitworks-page .phase .phase-container .phase-box {
+    width: 100%;
+
+    background-color: #e8e8e8;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .howitworks-page .phase .phase-container .phase-box .tag {
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    padding: 1px 30px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    border-radius: 0px 3px 3px 0px;
+  }
+
+  .howitworks-page .phase .phase-container .phase-box .triangle {
+    position: absolute;
+    width: 10px;
+    top: 50px;
+    left: -10px;
+    height: 10px;
+    display: flex;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+  }
+
+  .howitworks-page .phase .phase-container .phase-box .content {
+    width: 100%;
+    font-size: 15px;
+    padding: 60px 20px;
+    background-color: ;
+    padding-bottom: 15px;
+  }
+
+  .howitworks-page .apply-btn-container {
+    width: 80%;
+    margin: auto;
+    height: 100px;
+  }
+
+  .howitworks-page .apply-btn-container .apply-btn {
+    padding: 10px 40px;
+    border: none;
+    background-color: #1d76bc;
+    color: white;
+    border-radius: 3px;
+    font-size: 17px;
+    float: right;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+  }
+  /*** HOW IT WORKS END ***/
 }
 
 /** ********************end of smaller screen********************** **/
@@ -1202,6 +1333,7 @@
     clip-path: polygon(35% 0%, 100% 100%, 0% 100%);
     position: relative;
     margin-top: -150px;
+    z-index: 200;
   }
 
   .home-page .triangle-container .triangle-pin {
@@ -1211,6 +1343,7 @@
     width: 200px;
     height: 200px;
     transform: rotate(-5deg);
+    z-index: 500;
   }
 
   .home-page .tips-container {
@@ -2087,6 +2220,135 @@
     height: 40px;
   }
   /*** SELECT CATEGORY PAGE END ***/
+
+  /*** HOW IT WORKS START ***/
+
+  .howitworks-page {
+    width: 100%;
+  }
+
+  .howitworks-page .hero {
+    width: 100%;
+    background-color: #eee;
+    height: 220px;
+    position: relative;
+    padding: 50px 10px;
+  }
+
+  .howitworks-page .hero .title {
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: #111;
+  }
+
+  .howitworks-page .hero .subtitle {
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    color: #111;
+  }
+
+  .howitworks-page .hero .pin-container {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    background-color: ;
+  }
+
+  .howitworks-page .hero .pin-container .pin {
+    width: 200px;
+    height: auto;
+    padding: 0px;
+    transform: rotate(15deg);
+    position: relative;
+    top: 35px;
+  }
+
+  .howitworks-page .phase {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px 60px;
+    /* background-color: #e8e8e8; */
+    background-color: #eee;
+    margin-bottom: 50px;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .howitworks-page .phase .phase-title {
+    width: 100%;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .howitworks-page .phase .phase-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .howitworks-page .phase .phase-container .phase-box {
+    width: 100%;
+
+    background-color: #e8e8e8;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .howitworks-page .phase .phase-container .phase-box .tag {
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    padding: 1px 30px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    border-radius: 0px 3px 3px 0px;
+  }
+
+  .howitworks-page .phase .phase-container .phase-box .triangle {
+    position: absolute;
+    width: 10px;
+    top: 50px;
+    left: -10px;
+    height: 10px;
+    display: flex;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+  }
+
+  .howitworks-page .phase .phase-container .phase-box .content {
+    width: 100%;
+    font-size: 17px;
+    padding: 60px 20px;
+    background-color: ;
+    padding-bottom: 15px;
+  }
+
+  .howitworks-page .apply-btn-container {
+    width: 80%;
+    margin: auto;
+    height: 100px;
+  }
+
+  .howitworks-page .apply-btn-container .apply-btn {
+    padding: 10px 40px;
+    border: none;
+    background-color: #1d76bc;
+    color: white;
+    border-radius: 3px;
+    font-size: 17px;
+    float: right;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+  }
+  /*** HOW IT WORKS END ***/
 }
 
 /** **************end of bigger screen************************ **/

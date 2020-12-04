@@ -5,7 +5,7 @@
     </a>
     <ul class="site-sidebar">
         <li><a href="./">Home</a></li>
-        <li><a href="">How it works</a></li>
+        <li><a href="how-it-works">How it works</a></li>
         <li><a href="about">Who we are</a></li>
         <li><a href="">Contact Us</a></li>
         <li><a href="">Blog</a></li>
