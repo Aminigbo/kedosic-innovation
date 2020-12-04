@@ -80,15 +80,21 @@
             <div class="row2">
                 <div class="title">The Kedosic Vision</div>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Kedosic innovation’s major goal is to create values through talent 
+                recognition. Work with exceptional a o people that will produce quality
+                 and sustainable environment for humanity.
                 </p>
-
+                <div class="title">The Kedosic Mission</div>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    
+                We are on a mission to support innovative and entrepreneurial minds in
+                 every industry.  We want to be part of the idea development process 
+                 towards building a reputable company that will revolutionize and create
+                  opportunities for everyone to thrive.
+                The need to create a lasting impact in the world is greater now than ever.
+                 Hence, with exceptional and talented people, we can improve every 
+                 industry and improve our quality of lives.
+
                 </p>
 
 

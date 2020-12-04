@@ -2,22 +2,22 @@
 
 <div class="mobile-details dashboard-mobile-details" style="display:;">
 
-    <a href="" class="detail">
+    <a  class="detail dashboard-expand-btn">
         <i class="fa fa-user"></i>
         <span><?php echo $firstname ?></span>
     </a>
 
-    <a href="" class="detail">
+    <a class="detail dashboard-expand-btn">
         <i class="fa fa-check-circle"></i>
         <span>Status</span>
     </a>
 
-    <a href="" class="detail">
+    <a class="detail dashboard-expand-btn">
         <i class="fa fa-star"></i> 
         <span>Progress</span>
     </a>
 
-    <a href="" class="detail">
+    <a class="detail dashboard-expand-btn">
         <i class="fa fa-users"></i>
         <span>Team</span>
     </a>
@@ -59,9 +59,9 @@
     <div class="detail">
         <div class="title">Business Launch progress</div>
         <div class="progress-bar-container mt-1 mb-1">
-            <div class="progress-bar"></div>
+            <div class="progress-bar" style="width:90%" ></div>
         </div>
-        <div class="sub-title">40%</div> <br><br>
+        <div class="sub-title">90%</div> <br><br>
 
         <?php
         

@@ -108,10 +108,14 @@ function isLoggedIn()
 
       <div class="tips tip1">
         <div class="row1">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-
-        </div>
+        
+        As the world evolve and change, so is our ability to make it better. 
+        Through our innovative ideas we can transform every industry. 
+        We incorporate and work with great and creative minded entrepreneurs and
+         innovators to change the future. With idea consumption, we help develop
+          and train talented individuals to build their companies and brands..
+          
+          </div>
         <div class="row2">
           <div class="centered-div">
             <img src="assets/images/2.svg" alt="">
@@ -131,7 +135,15 @@ function isLoggedIn()
 
         </div>
         <div class="row2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Now than ever is the time to rethink what we do with our time, our raw 
+        talents and our intellectual abilities. It is on us to develop and
+         strategically change our world. We are committed to reduce the
+          limitations that has held us back from our goals. We offer the
+           opportunity for everyone to kick start their ideas and create
+            a reputable company in every industry, especially in technological 
+            advancements.
+
+        
 
         </div>
       </div>
@@ -140,8 +152,16 @@ function isLoggedIn()
 
       <div class="tips tip3">
         <div class="row1">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Innovation is a real challenge that is faced in every industry and in our 
+      everyday lives. However, with the right tools and support, complex issues
+       can be made simple and that is what we do. We want to take the next step 
+       and move forward through a continuous brainstorming and solving the world 
+       problems that we are faced with. We let you innovate with us through learning
+        by doing. Innovative idea makes you lead the profits of tomorrow. It is less 
+        risky to do something than do nothing.
 
+        
+        
         </div>
         <div class="row2">
           <div class="centered-div">
