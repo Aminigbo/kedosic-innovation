@@ -1,0 +1,419 @@
+/* background-color: #010327*/
+/*************************** start of  smaller screen*******************/
+@media only screen and (max-width: 690px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  /*** MAIN AREA START ***/
+  .main-area {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    
+  }
+
+  .main-area .left {
+    width: 100px;
+    height: 100vh;
+    background-color: rgb(4, 4, 34);
+    overflow-y: auto;
+    transition: 0.5s ease;
+  }
+
+  .main-area .left .hamburger {
+    color: white;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    float: right;
+    font-size: 18px;
+  }
+
+  .main-area .left .mobile-details {
+    width: 100%;
+    margin-top: 70px;
+  }
+
+  .main-area .left .mobile-details .detail {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .main-area .left .mobile-details .detail i {
+    font-size: 20px;
+    color: white;
+    display: block;
+    opacity: 0.9;
+  }
+
+  .main-area .left .mobile-details .detail span {
+    font-size: 13px;
+    color: white;
+    display: block;
+    opacity: 0.9;
+  }
+
+  .main-area .left .desktop-details {
+    width: 100%;
+    margin-top: 70px;
+    padding: 0px 20px;
+    display: none;
+  }
+
+  .main-area .left .desktop-details .detail {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .main-area .left .desktop-details .detail .title {
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+  }
+
+  .main-area .left .desktop-details .detail .progress-bar-container {
+    width: 100%;
+    height: 8px;
+    border-radius: 100px;
+    background-color: white;
+    position: relative;
+  }
+
+  .main-area
+    .left
+    .desktop-details
+    .detail
+    .progress-bar-container
+    .progress-bar {
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: mediumseagreen;
+    border-radius: 100px;
+  }
+
+  .main-area .left .desktop-details .detail .sub-title {
+    font-size: 14px;
+    color: white;
+    opacity: 0.8;
+  }
+
+  .main-area .left .desktop-details .detail .team-container {
+    width: 100%;
+    position: relative;
+  }
+
+  .main-area .left .desktop-details .detail .team-container .box {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 50px;
+  }
+
+  .main-area .left .desktop-details .detail .team-container .box img {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    margin-right: 10px;
+    float: left;
+  }
+
+  .main-area .left .desktop-details .detail .team-container .name {
+    font-size: 14px;
+    color: white;
+    position: relative;
+    top: 5px;
+  }
+
+  .main-area .right {
+    width: calc(100% - 100px);
+    height: 100vh;
+    background-color: #e8e8e8;
+    overflow-y: auto;
+    padding: 10px;
+  }
+
+  .main-area .right .page-title {
+    width: 100%;
+    padding: 5px 10px;
+    color: rgb(4, 4, 34);
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .main-area .right .page-subtitle {
+    width: 100%;
+    padding: 5px 10px;
+    color: rgb(4, 4, 34);
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .main-area .right .page-subtitle span {
+    border-bottom: 2.5px solid mediumseagreen;
+  }
+  /*** MAIN AREA END ***/
+
+
+  
+  /*** HOME PAGE START ***/
+  .home-page {
+    width: 100%;
+  }
+
+  .home-page .cards-container {
+    width: 100%;
+    padding: 5px 10px;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 30px;
+  }
+
+  .home-page .cards-container .card {
+    width: 300px;
+    height: 150px;
+    background-color: white;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 15px 15px;
+  }
+
+  .home-page .cards-container .card .title {
+    font-size: 17px;
+    color: rgb(4, 4, 34);
+    font-weight: bold;
+  }
+
+  .home-page .cards-container .card .subtitle {
+    font-size: 13px;
+    color: rgb(4, 4, 34);
+  }
+
+  .home-page .cards-container .card .detail {
+    font-size: 13px;
+    color:mediumseagreen;
+  }
+  /*** HOME PAGE END ***/
+
+}
+
+/** ********************end of smaller screen********************** **/
+/********/
+/********/
+/********/
+/********/
+/********/
+/********/
+/********/
+/** *******************start of bigger screen************************/
+@media only screen and (min-width: 690px) {
+  .hide-on-desktop {
+    display: none !important;
+  }
+
+  /*** MAIN AREA START ***/
+  .main-area {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .main-area .left {
+    width: 250px;
+    height: 100vh;
+    background-color: rgb(4, 4, 34);
+    overflow-y: auto;
+    transition: 0.5s ease;
+  }
+
+  .main-area .left .hamburger {
+    color: white;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    float: right;
+    font-size: 18px;
+  }
+
+  .main-area .left .mobile-details {
+    width: 100%;
+    margin-top: 70px;
+    display: none !important;
+  }
+
+  .main-area .left .mobile-details .detail {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .main-area .left .mobile-details .detail i {
+    font-size: 20px;
+    color: white;
+    display: block;
+    opacity: 0.9;
+  }
+
+  .main-area .left .mobile-details .detail span {
+    font-size: 13px;
+    color: white;
+    display: block;
+    opacity: 0.9;
+  }
+
+  .main-area .left .desktop-details {
+    width: 100%;
+    margin-top: 70px;
+    padding: 0px 20px;
+    display: block !important;
+  }
+
+  .main-area .left .desktop-details .detail {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .main-area .left .desktop-details .detail .title {
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+  }
+
+  .main-area .left .desktop-details .detail .progress-bar-container {
+    width: 100%;
+    height: 8px;
+    border-radius: 100px;
+    background-color: white;
+    position: relative;
+  }
+
+  .main-area
+    .left
+    .desktop-details
+    .detail
+    .progress-bar-container
+    .progress-bar {
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: mediumseagreen;
+    border-radius: 100px;
+  }
+
+  .main-area .left .desktop-details .detail .sub-title {
+    font-size: 14px;
+    color: white;
+    opacity: 0.8;
+  }
+
+  .main-area .left .desktop-details .detail .team-container {
+    width: 100%;
+    position: relative;
+  }
+
+  .main-area .left .desktop-details .detail .team-container .box {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 50px;
+  }
+
+  .main-area .left .desktop-details .detail .team-container .box img {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    margin-right: 10px;
+    float: left;
+  }
+
+  .main-area .left .desktop-details .detail .team-container .name {
+    font-size: 14px;
+    color: white;
+    position: relative;
+    top: 5px;
+  }
+
+  .main-area .right {
+    width: calc(100% - 250px);
+    height: 100vh;
+    background-color: #e8e8e8;
+
+    overflow-y: auto;
+    padding: 10px;
+  }
+
+  .main-area .right .page-title {
+    width: 100%;
+    padding: 5px 10px;
+    color: rgb(4, 4, 34);
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .main-area .right .page-subtitle {
+    width: 100%;
+    padding: 5px 10px;
+    color: rgb(4, 4, 34);
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .main-area .right .page-subtitle span {
+    border-bottom: 2.5px solid mediumseagreen;
+  }
+  /*** MAIN AREA END ***/
+
+  /*** HOME PAGE START ***/
+  .home-page {
+    width: 100%;
+  }
+
+  .home-page .cards-container {
+    width: 100%;
+    padding: 5px 10px;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 30px;
+  }
+
+  .home-page .cards-container .card {
+    width: 300px;
+    height: 150px;
+    background-color: white;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 15px 15px;
+  }
+
+  .home-page .cards-container .card .title {
+    font-size: 20px;
+    color: rgb(4, 4, 34);
+    font-weight: bold;
+  }
+
+  .home-page .cards-container .card .subtitle {
+    font-size: 15px;
+    color: rgb(4, 4, 34);
+  }
+
+  .home-page .cards-container .card .detail {
+    font-size: 14px;
+    color:mediumseagreen;
+  /*** HOME PAGE END ***/
+}
+
+/** **************end of bigger screen************************ **/
+
+.centered-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

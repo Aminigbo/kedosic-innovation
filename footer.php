@@ -5,8 +5,8 @@
                 <img src="assets/images/icons/kedosic.svg" class="site-logo" alt="">
             </a>
             <p>
-                Kedosic innovation was founded in 2020 by Kpenuoguoreata & Oluchi Olafonye with the goat to support
-                the most talented and ambitious entreprenuers build a company
+                Kedosic innovation was founded in 2020 by Kpenuoguoreata & Oluchi Olafonye with the goal to support
+                the most talented and ambitious entreprenuers build a company.
             </p>
             <p class="copy-right">2020 Kedosic. All Right Reserved</p>
         </div>

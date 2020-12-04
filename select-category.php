@@ -80,7 +80,7 @@ function isLoggedIn()
                 <div class="title" style="text-align:left">
                 Hi <?php echo $_SESSION['user']['firstname'] ?>, <br>
                     <span style="font-weight:lighter">
-                    PLEASE SELECT YOUR IDEA CATEGORY
+                    Please select your idea categosry
                     </span>
                 </div>
 

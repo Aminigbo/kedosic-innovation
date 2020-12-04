@@ -67,9 +67,11 @@ function isLoggedIn()
 <body>
 
 
-    <!-- header start --->
-    <?php include 'header.php'; ?>
-    <!-- header end --->
+<div class="formtop">
+        <!-- header start --->
+        <?php include 'header.php'; ?>
+        <!-- header end --->
+    </div>
 
     <!-- form component start --->
     <section class="form-component">

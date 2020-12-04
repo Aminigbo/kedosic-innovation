@@ -1,4 +1,19 @@
-<?php include 'config/db/db.php';  ?>
+<?php include 'config/db/db.php'; 
+
+function isLoggedIn() 
+  {
+    if (isset($_SESSION['user'])) {
+      return true;
+    }else{
+      return false;
+    }
+  }
+
+  if (isLoggedIn()) {
+    header("location:account/"); 
+  }
+  
+  ?>
 
 <!-- main blue color: #1D76BC --->
 <!-- homepage grey background-color: #E8E8E8 --->
@@ -12,7 +27,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Kedosic | Verify OTP</title>
+    <title>Kedosic | Check Status</title>
 
 
 
@@ -63,48 +78,20 @@
     <!--- VERIFY OTP PAGE START --->
     <main class="verify-otp-page">
         
-        <?php
-            $otp = $_GET['user_k_code'] ;
-            $sql = "SELECT * FROM kedosic_users WHERE k_code='$otp' "; 
-            $result = mysqli_query($conn, $sql);
-            if (mysqli_num_rows($result)) {
-                while ($row=mysqli_fetch_assoc($result)) {
-                    $id=$row['id'];
-                    $firstname=$row['firstname'];
-                    $lastname=$row['lastname'];
-                    $email=$row['email'];
-                    $phone=$row['phone'];
-                    $k_code=$row['k_code'];
-                    $date=$row['date'];
-                    $verified=$row['verified'];
-
-                    if (strlen($phone)==10) {
-                        $first_three=substr($phone, 0,3);
-                        $last_two=substr($phone, 7,10);
-                    }else{
-                        $first_three="";
-                        $last_two=""; 
-                    }
-                    
-                }
-            }
-        ?>
+         
 
 
         <section class="form-container">
-            <div class="title">Please Enter OTP code <i class="fa fa-question-circle"></i></div>
-            <div class="sub-title">A verification code has been sent to 0<?php echo $first_three ?>xxxxx<?php echo $last_two ?></div>
+            <div class="title">Please Enter your k-pin <i style="cursor:pointer;" class="fa fa-question-circle what_is_k_pin"></i></div>
+            <!-- <div class="sub-title">A verification code has been sent to </div> -->
             <div class="field-container">
-                <input type="text" class="field">
-                <input type="text" class="field">
-                <input type="text" class="field">
-                <input type="text" class="field">
+                <input type="text" placeholder="ABC1234" class="field k_pin" style="width:100%;text-transform: uppercase;"> 
             </div>
             <div class="centered-div">
-                <button class="verify-btn">Verify</button>
+                <button class="verify-btn checkPin" id="done">Check Status</button>
             </div>
-            <div class="resend">Didn't get the code? <a href="#" class="resend-btn">Resend code</a></div>
-            <div class="wrong-number">Entered a wrong number? <a href="#" class="wrong-number-btn">Go back</a></div>
+            <div class="cb"></div>
+            <div class="resend">Didn't have a pin? <a href="apply" class="resend-btn">Apply Now</a></div>  
 
         </section>
 
@@ -130,9 +117,34 @@
 <script src="jquery.min.js"></script>
 <script>
     $(document).ready(function(){
-        $('.verify-btn').click(function(){
+        $(".what_is_k_pin").click(function(){
+            alert("This is what k-pin is all about.")
+        })
+        
+        $('.checkPin').click(function(){
+            let done = $(this).attr("id");
+            let k_pin = $(".k_pin").val()
+            if (k_pin.length < 1) {
+                alert("Field is empty")
+            }else{
+                $.ajax({
+                url:"config/scripts/ajax.php",
+                method:"POST",
+                async:true,
+                data:{
+                    "check_status":done,
+                    "k_pin":k_pin, 
+                },
+                success:function(data){ 
+                    $('.cb').html(data)
+                    $('.loader').show(); 
+                     
+                            
+                },
+            })
+            }
             
-            window.location="select-category.php"
+            
         })
     })
 </script>

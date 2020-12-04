@@ -4,12 +4,12 @@
     </a>
     </a>
     <ul class="site-sidebar">
-        <li><a href="./">home</a></li>
-        <li><a href="">how it works</a></li>
-        <li><a href="about">who we are</a></li>
-        <li><a href="">contact Us</a></li>
-        <li><a href="">blog</a></li>
-        <li><a href="" class="check-status-btn">check status</a></li>
+        <li><a href="./">Home</a></li>
+        <li><a href="">How it works</a></li>
+        <li><a href="about">Who we are</a></li>
+        <li><a href="">Contact Us</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="status" class="check-status-btn">check status</a></li>
     </ul>
     <button class="hamburger hide-on-desktop side-bar-btn"><i class="fa fa-bars"></i></button>
 </section>

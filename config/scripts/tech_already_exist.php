@@ -51,7 +51,7 @@ if (isset($_POST['done'])) {
         if ($success && $success2) {
             ?><script>
                 $('.loader').fadeOut() 
-                window.location="account"
+                window.location="account/"
             </script><?php
         }else{
             ?><script>

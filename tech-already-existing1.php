@@ -67,9 +67,11 @@ function isLoggedIn()
 <body>
 
 
-    <!-- header start --->
-    <?php include 'header.php'; ?>
-    <!-- header end --->
+<div class="formtop">
+        <!-- header start --->
+        <?php include 'header.php'; ?>
+        <!-- header end --->
+    </div>
 
     <!-- form component start --->
     <section class="form-component">
@@ -124,7 +126,13 @@ function isLoggedIn()
 
                     <label for="">What stage of development are you?</label>
                     <select name="" id="" class="field stage_dev">
-                        <option>Final stage</option>
+                        <option>Market survey and analysis</option>
+                        <option>Business development</option>
+                        <option>Idea Testing</option>
+                        <option>Branding</option>
+                        <option>Scouting for Investment</option>
+                        <option>Beta Testing</option>
+                        <option>About to Launch</option>
                     </select>
 
                     <label for="">Is this business or product in your field of experience?</label>
@@ -132,7 +140,11 @@ function isLoggedIn()
 
                     <label for="">What marketing channel is your business or product currently using?</label>
                     <select name="" id="" class="field marketing_channel">
-                        <option>Social Media</option>
+                    <option>Social media</option>
+                        <option>Affiliate marketing</option>
+                        <option>Direct offline</option>
+                        <option>Content marketing</option>
+                        <option>Digital marketing</option> 
                     </select>
 
                     

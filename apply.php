@@ -58,6 +58,32 @@ function isLoggedIn()
             background-color: white;
             box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1);
         }
+
+        /* small screen */
+        @media only screen and (max-width: 690px) {
+            .div{
+                width:90%;
+                height:50%;
+                background-color:white;
+                margin-left:5%;
+                margin-top:40%;
+                border-radius:10px;;
+                position:relative;
+            }
+        }
+
+        /* large screen */
+        @media only screen and (min-width: 690px) {
+            .div{
+                border-radius:10px;;
+                width:30%;
+                height:40%;
+                background-color:white;
+                margin-left:35%;
+                margin-top:10%;
+                position:relative;
+            }
+        }
     </style>
 
 </head>
@@ -67,9 +93,11 @@ function isLoggedIn()
 <body>
 
 
-    <!-- header start --->
-    <?php include 'header.php'; ?>
-    <!-- header end --->
+<div class="formtop">
+        <!-- header start --->
+        <?php include 'header.php'; ?>
+        <!-- header end --->
+    </div>
 
 
     <!--- APPLY PAGE START --->
@@ -120,6 +148,39 @@ function isLoggedIn()
     left:0px;z-index:10000;display:none;">
     <!-- <img src="assets/loader/785.gif" alt="assets/loader/832.gif"> -->
     </div>
+
+    <div class="success" style="width:100%;height:100%;position:fixed;background-color:rgb(0,0,0,0.7);top:0px;
+    left:0px;z-index:10000;display:none ;">
+    <div class="div" >
+        <b class=" " style="position:absolute;right:20px;bottom:10px;font-size:20px;
+        background-color:grey;color:white;padding:1px 10px;border-radius:7px;cursor:pointer;"
+        onclick="window.location='select-category'">
+        close
+        </b>
+
+        <div style="color: #354168;text-align:center;"> <br>
+        <h2 style="color: #354168;text-align:center;">SUCCESSFUL</h2>
+        </div> 
+        <div style="padding:10px 25px;font-size:20px;text-align:left;"> 
+        
+
+        <span style="color: #354168;">Your registeration with kedosic innovation was successful. <br>
+            <span style="color: #354168;">Your K-Code 
+            <b><h class="k_code"></h></b>
+             has been sent to your email</span>, <br>
+            Keep it safe.
+        </span>
+
+        
+
+        <div style="text-align:center;font-size:18px;font-weight:lighter;">
+        <br>  <br>
+        
+        </div>
+        </div>
+        
+    </div>
+    </div>
 </body>
 
 </html>
@@ -152,19 +213,22 @@ function isLoggedIn()
             if (firstname.length < 3 ) {
                 // ||
                 $(".cb").html("<span style='color:crimson;'>Firstname too short</span>")
-
+                $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
                 return false;
                 
             }else if(lastname.length < 3 ){ 
                 $(".cb").html("<span style='color:crimson;'>Lastname too short</span>")
+                $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
                 return false;
 
             }else if(IsEmail(email)==false){ 
                 $(".cb").html("<span style='color:crimson;'>Invalid email</span>")
+                $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
                 return false;
 
             }else if (phone.length != 10) {
                 $(".cb").html("<span style='color:crimson;'>Invalid phone</span>")
+                $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
                 return false;
 
             }else{ 

@@ -52,6 +52,7 @@ if (isset($_POST['register'])) {
         ?><script>
             $('.loader').fadeOut()
                 $(".cb").html("<span style='color:crimson;'>You missed a field</span>")
+                $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
         </script><?php
     }else{
         // check if email exists
@@ -67,20 +68,25 @@ if (isset($_POST['register'])) {
             
             $('.loader').fadeOut()
                 $(".cb").html("<span style='color:crimson;'>Email already taken</span>")
+                $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
             </script><?php
 
         }elseif (mysqli_num_rows($result2)){
             ?><script>
             $('.loader').fadeOut()
                 $(".cb").html("<span style='color:crimson;'>Phone number already taken</span>")
+                $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
             </script><?php
         }else{
 
             ?><script>
                 let k_code = "<?php echo $k_code ?>"
-                $('.loader').fadeOut()
+                $('.loader').hide()
+                // $('.success_div').fadeIn() 
+                $('.k_code').html(k_code)
+                $('.success').show();
                 // window.location="verify-otp.php?user_k_code="+k_code
-                window.location="select-category";
+                // window.location="select-category";
             </script><?php
 
             $date = date("Y-m-d");
@@ -99,13 +105,38 @@ if (isset($_POST['register'])) {
 
                 $firstname= $_SESSION['user']['firstname'];
 
-                echo $firstname;
+                // echo $firstname;
 
                 // if ($type== "GURUADMIN@") {
                 //     // header("location:admin");
                 // }else{
                 //     header("location:account");
                 // }
+
+                // SEND MAIL BEFORE LOGIN
+                $subject = "Registeration successful.";
+                $text = '<!DOCTYPE html><html>
+                    <head>
+                        <meta property="og:title" content="Kedosic Innovation">
+                        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+                        <meta name="referrer" content="origin">
+                        <meta charset="UTF-8">
+                        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                        <meta name="viewport" content="width=device-width, initial-scale=1">
+                        <title>Kedosic Innovation</title>
+                    </head>
+                <body>
+                    <h2 style="color: #354168;">Hello ' . $firstname . ',</h2>
+                    <h2 style="color: #354168;">Your registeration with kedosic innovation was successful</h2>
+                    <h2 style="color: #354168;">Here is your K-Code '. $k_code .'</h2>
+                    <h2 style="color: #354168;">Thank you.</h2><br>
+                </body> 
+                </html>';
+                $headers  = 'MIME-Version: 1.0' . "\r\n";
+                $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+                $headers .= 'From: Kedosic Innovation <utuu>' . "\r\n";
+                $headers .= 'Reply-To: support@Kedosic.com' . "\r\n";
+                mail($email, $subject, $text, $headers);
                 
             
             }
@@ -113,13 +144,33 @@ if (isset($_POST['register'])) {
 
         }
     }
+  
+}
 
-    
 
-    
+//  checking user
+if (isset($_POST['check_status'])) {
+    $code  = mysqli_real_escape_string($conn, $_POST['k_pin']) ;
 
-    
-    
+    // check if phone exists
+    $sql2 = "SELECT * FROM kedosic_users WHERE k_code='$code' "; 
+    $result2 = mysqli_query($conn, $sql2);
 
-    
+    if (mysqli_num_rows($result2)) { // user found
+        $logged_in_user = mysqli_fetch_assoc($result2);
+        $_SESSION['user'] = $logged_in_user;
+        $_SESSION['success']  = "You are now logged in";
+
+        // header("location:account/");
+
+        ?> <script>
+        window.location="account/"
+    </script>  <?php
+
+    }else{ 
+    ?> <script>
+        alert("User not found !")
+        window.location="apply"
+    </script>  <?php 
+    }
 }

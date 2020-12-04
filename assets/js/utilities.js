@@ -26,3 +26,24 @@ window.onscroll = function() {
         sidebar_is_open = true;
     }
   })
+
+
+  /*** DASHBOARD SCRIPT START ***/
+  var dashboard_sidebar_is_open = false;
+$(".dashboard-expand-btn").click(function(){
+
+  if(dashboard_sidebar_is_open){
+  $(".dashboard-sidebar").css("width", "100px");
+  $(".dashboard-main-area").css("width", "calc(100% - 100px)");
+  $(".dashboard-desktop-details").hide();
+  $(".dashboard-mobile-details").show();
+  dashboard_sidebar_is_open = false;
+  }else{
+    $(".dashboard-sidebar").css("width", "250px");
+    $(".dashboard-main-area").css("width", "calc(100% - 250px)");
+    $(".dashboard-mobile-details").hide();
+    $(".dashboard-desktop-details").show();
+    dashboard_sidebar_is_open = true;
+  }
+})
+  /*** DASHBOARD SCRIPT END ***/
