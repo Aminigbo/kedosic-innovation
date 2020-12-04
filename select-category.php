@@ -1,16 +1,27 @@
-<!-- main blue color: #1D76BC --->
-<!-- homepage grey background-color: #E8E8E8 --->
-<!-- apply now green color btn: #009345 --->
-<!-- site orange color : #FF8D41 --->
+<?php include 'config/db/db.php';
+
+function isLoggedIn() 
+  {
+    if (isset($_SESSION['user'])) {
+      return true;
+    }else{
+      return false;
+    }
+  }
+
+  if (!isLoggedIn()) {
+    header("location:apply"); 
+  }
+?>
 
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="zxx"> 
 
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Kedosic | About</title>
+    <title>Kedosic | Select Category</title>
 
 
 
@@ -66,7 +77,14 @@
 
             <!-- select container start --->
             <div class="select-container none-selected" style="display:;">
-                <div class="title">PLEASE SELECT YOUR IDEA CATEGORY</div>
+                <div class="title" style="text-align:left">
+                Hi <?php echo $_SESSION['user']['firstname'] ?>, <br>
+                    <span style="font-weight:lighter">
+                    PLEASE SELECT YOUR IDEA CATEGORY
+                    </span>
+                </div>
+
+                
 
                 <div class="box tech-based-box">
                     <button class="icon" style="background-color:royalblue;color:white;">T</button> <span>Tech based</span> <i class="fa fa-angle-right right-icon"></i>

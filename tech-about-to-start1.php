@@ -2,7 +2,21 @@
 <!-- homepage grey background-color: #E8E8E8 --->
 <!-- apply now green color btn: #009345 --->
 <!-- site orange color : #FF8D41 --->
+<?php include 'config/db/db.php';
 
+function isLoggedIn() 
+  {
+    if (isset($_SESSION['user'])) {
+      return true;
+    }else{
+      return false;
+    }
+  }
+
+  if (!isLoggedIn()) {
+    header("location:apply"); 
+  }
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -10,7 +24,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Kedosic | About</title>
+    <title>Kedosic | Apply</title>
 
 
 
@@ -69,6 +83,7 @@
                 </div>
 
                 <div class="row2 step1" >
+                
                     <div class="title">TECH BASED - About to start business</div>
                     <div class="steps">Step 1 of 3</div>
                     <div class="cb1"></div>
@@ -151,7 +166,7 @@
                     <input type="text" class="field working_hours"> 
 
                     <div class="btns-container">
-                        <button class="next-btn done" id="done" data-user="K556K7L">Done</button>
+                        <button class="next-btn done" id="done" data-user="<?php echo $_SESSION['user']['k_code'] ?>">Done</button>
                         <a style="cursor:pointer;margin:7px;" class="cancel-btn back_to_two">Back</a>
                     </div>
                 </div>
@@ -194,10 +209,12 @@ $(document).ready(function(){
         if (bus_name.length < 1 || headquatered.length < 1 || product_kind.length < 1 || targeting.length < 1) {
             // alert("")
             $('.cb1').html("<span style='color:crimson;'>Fill out all forms</span>")
+            $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
         }else{
             $('.cb1').html("")
             $('.step1').hide()
             $('.step2').fadeIn()
+            $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
         }
 
          
@@ -215,10 +232,12 @@ $(document).ready(function(){
         if (start_up_ideas.length < 1 || product_features.length < 1 || develop_stage.length < 1 ) {
             // alert("")
             $('.cb2').html("<span style='color:crimson;'>Fill out all forms</span>")
+            $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
         }else{
             $('.cb2').html("")
             $('.step2').hide()
             $('.step3').fadeIn()
+            $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
         }
         
     })
@@ -227,12 +246,14 @@ $(document).ready(function(){
         // alert("")
         $('.step2').hide()
         $('.step1').fadeIn()
-    })
+        $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
+    }) 
 
     $('.back_to_two').click(function(){
         // alert("")
         $('.step3').hide()
         $('.step2').fadeIn()
+        $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
     })
 
 
@@ -259,6 +280,7 @@ $(document).ready(function(){
         if (team_no.length < 1 || challenges.length < 1 || partner_consent.length < 1|| experience.length < 1|| working_hours.length < 1 ) {
             // alert("")
             $('.cb3').html("<span style='color:crimson;'>Fill out all forms</span>")
+            $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
         }else{
             
             $('.cb3').html("")

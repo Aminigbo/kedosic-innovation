@@ -79,13 +79,38 @@ if (isset($_POST['register'])) {
             ?><script>
                 let k_code = "<?php echo $k_code ?>"
                 $('.loader').fadeOut()
-                window.location="verify-otp.php?user_k_code="+k_code
+                // window.location="verify-otp.php?user_k_code="+k_code
+                window.location="select-category";
             </script><?php
 
             $date = date("Y-m-d");
             $query = "INSERT INTO kedosic_users (firstname,lastname,email,phone,k_code,`date`,verified,tech_already_exist,tech_to_start,nontech_to_start,nontech_already_exist	) 
             VALUES('$firstname','$lastname','$email','$phone','$k_code','$date','0','0','0','0','0')";
             $success= mysqli_query($conn, $query);
+
+
+            $query2 = "SELECT * FROM kedosic_users WHERE  k_code='$k_code' ";
+            $results2 = mysqli_query($conn, $query2);
+            
+            if (mysqli_num_rows($results2)) { // user found
+                $logged_in_user = mysqli_fetch_assoc($results2);
+                $_SESSION['user'] = $logged_in_user;
+                $_SESSION['success']  = "You are now logged in";
+
+                $firstname= $_SESSION['user']['firstname'];
+
+                echo $firstname;
+
+                // if ($type== "GURUADMIN@") {
+                //     // header("location:admin");
+                // }else{
+                //     header("location:account");
+                // }
+                
+            
+            }
+
+
         }
     }
 

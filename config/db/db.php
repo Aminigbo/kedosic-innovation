@@ -1,4 +1,7 @@
 <?php 
+
+session_start();
+
 // $dbservername = 'localhost';
  
 //  $dbusername = 'vichilee_vhcluser';

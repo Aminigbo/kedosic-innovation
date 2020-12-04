@@ -2,7 +2,21 @@
 <!-- homepage grey background-color: #E8E8E8 --->
 <!-- apply now green color btn: #009345 --->
 <!-- site orange color : #FF8D41 --->
+<?php include 'config/db/db.php';
 
+function isLoggedIn() 
+  {
+    if (isset($_SESSION['user'])) {
+      return true;
+    }else{
+      return false;
+    }
+  }
+
+  if (!isLoggedIn()) {
+    header("location:apply"); 
+  }
+?>
 <!DOCTYPE html>
 <html lang="zxx"> 
 
@@ -10,7 +24,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Kedosic | About</title>
+    <title>Kedosic | Apply</title>
 
 
 
@@ -69,7 +83,7 @@
                 </div>
 
                 <div class="row2 step1">
-                    <div class="title">NON-TECH BASED - About to start </div>
+                    <div class="title">NON-TECH BASED - About to start </div> 
                     <div class="steps">Step 1 of 2</div>
                     <div class="cb1"></div>
 
@@ -135,7 +149,7 @@
                     <input type="text" class="field working_hours">
                     
                     <div class="btns-container">
-                        <button class="submit-btn done" id="done" data-user="K556K7L">Done</button>
+                        <button class="submit-btn done" id="done" data-user="<?php echo $_SESSION['user']['k_code'] ?>">Done</button>
                         <a style="cursor:pointer;" class="cancel-btn back_to_one">Back</a>
                     </div>
 
@@ -179,10 +193,12 @@
             if (product_name.length < 1 || headquatered.length < 1 || sub_business.length < 1 || startup_idea.length < 1 || product_feature.length < 1 || competitors.length < 1) {
                 // alert("")
                 $('.cb1').html("<span style='color:crimson;'>Fill out all forms</span>")
+                $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
             }else{
                 $('.cb1').html("")
                 $('.step1').hide()
                 $('.step2').fadeIn()
+                $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
             }
 
             
@@ -212,6 +228,7 @@
             if (dev_stage.length < 1 || team_no.length < 1 || bus_plan.length < 1 || challenges.length < 1 || partners_consent.length < 1 || field_of_experience.length < 1 || working_hours.length < 1) {
                 // alert("")
                 $('.cb2').html("<span style='color:crimson;'>Fill out all forms</span>")
+                $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
             }else{
                 $('.cb2').html("")
                 $.ajax({

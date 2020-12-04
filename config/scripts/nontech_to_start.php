@@ -3,10 +3,7 @@
 
 
 // users first registeration
-if (isset($_POST['done'])) {
-    ?><script>
-    alert("")
-    </script><?php
+if (isset($_POST['done'])) { 
 
     $user = mysqli_real_escape_string($conn, $_POST['user']);
 

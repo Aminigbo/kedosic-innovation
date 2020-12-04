@@ -57,7 +57,7 @@
   <!-- header end --->
 
 
-  <!--- HOME PAGE START --->
+  <!--- HOME PAGE START ---> 
   <main class="home-page">
 
 

@@ -2,7 +2,21 @@
 <!-- homepage grey background-color: #E8E8E8 --->
 <!-- apply now green color btn: #009345 --->
 <!-- site orange color : #FF8D41 --->
+<?php include 'config/db/db.php';
 
+function isLoggedIn() 
+  {
+    if (isset($_SESSION['user'])) {
+      return true;
+    }else{
+      return false;
+    }
+  }
+
+  if (isLoggedIn()) {
+    header("location:account"); 
+  }
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -162,7 +176,7 @@
                     async:true,
                     data:{
                         "register":reg,
-                        "firstname":firstname,
+                        "firstname":firstname, 
                         "lastname":lastname,
                         "email":email,
                         "phone":phone,

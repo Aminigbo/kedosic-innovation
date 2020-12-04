@@ -2,7 +2,21 @@
 <!-- homepage grey background-color: #E8E8E8 --->
 <!-- apply now green color btn: #009345 --->
 <!-- site orange color : #FF8D41 --->
+<?php include 'config/db/db.php';
 
+function isLoggedIn() 
+  {
+    if (isset($_SESSION['user'])) {
+      return true;
+    }else{
+      return false;
+    }
+  }
+
+  if (!isLoggedIn()) {
+    header("location:apply"); 
+  }
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -192,7 +206,7 @@
                     <input type="text" class="field working_hours">
 
                     <div class="btns-container">
-                        <button class="submit-btn done" id="done" data-user="K556K7L">Done</button>
+                        <button class="submit-btn done" id="done" data-user="<?php echo $_SESSION['user']['k_code'] ?>">Done</button>
                         <a href="" class="cancel-btn back_to_three">Back</a>
                     </div>
 
@@ -230,6 +244,32 @@
 
 
 $(document).ready(function(){
+
+    $('.back_to_three').click(function(){
+        // alert("")
+        $('.step4').hide()
+        $('.step3').fadeIn()
+        $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
+    })
+
+    $('.back_to_two').click(function(){
+        // alert("")
+        $('.step3').hide()
+        $('.step2').fadeIn()
+        $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
+    })
+
+    $('.back_to_one').click(function(){
+        // alert("")
+        $('.step2').hide()
+        $('.step1').fadeIn()
+        $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
+    })
+
+
+
+
+
     $('.go_to_two').click(function(){
         let start_up_experience = $(".start_up_experience").val()
         let bus_name = $(".bus_name").val()
@@ -241,10 +281,12 @@ $(document).ready(function(){
         if (start_up_experience.length < 1 || bus_name.length < 1 || headquatered.length < 1|| bus_age.length < 1 ) {
             // alert("")
             $('.cb1').html("<span style='color:crimson;'>Fill out all forms</span>")
+            $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
         }else{
             $('.cb1').html("")
             $('.step1').hide()
             $('.step2').fadeIn()
+            $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
         }
         
     })
@@ -263,10 +305,12 @@ $(document).ready(function(){
         if (prod_features.length < 1 || competitors.length < 1 || stage_dev.length < 1 || field_of_expe.length < 1  || marketing_channel.length < 1 ) {
             // alert("")
             $('.cb2').html("<span style='color:crimson;'>Fill out all forms</span>")
+            $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
         }else{
             $('.cb2').html("")
             $('.step2').hide()
             $('.step3').fadeIn()
+            $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
         }
         
     })
@@ -283,10 +327,12 @@ $(document).ready(function(){
         if (product_kind.length < 1 || target.length < 1 || idea_concept.length < 1|| value_prop.length < 1 ) {
             // alert("")
             $('.cb3').html("<span style='color:crimson;'>Fill out all forms</span>")
+            $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
         }else{
             $('.cb3').html("")
             $('.step3').hide()
             $('.step4').fadeIn()
+            $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
         }
         
     })
@@ -324,6 +370,7 @@ $(document).ready(function(){
         if (making_money.length < 1 || team_no.length < 1 || partner_consent.length < 1 || investment.length < 1  || working_hours.length < 1 ) {
             // alert("")
             $('.cb4').html("<span style='color:crimson;'>Fill out all forms</span>")
+            $('html,body').animate({ scrollTop: $(".formtop").offset().top}, 400);
         }else{
             $('.cb4').html("")
 
