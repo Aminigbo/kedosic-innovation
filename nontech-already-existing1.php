@@ -109,6 +109,21 @@ function isLoggedIn()
 
                     <label for="">Which sub industry is your business?</label>
                     <select name="" id="" class="field bus_industry">
+                    <option>Medicine</option>
+                        <option>Education</option>
+                        <option>Technology</option>
+                        <option>Agriculture</option>
+                        <option>Transportation</option>
+                        <option>Food</option>
+                        <option>Commerce</option>
+                        <option>Environment and Health</option>
+                        <option>Manufacturing</option>
+                        <option>Engineering</option>
+                        <option>Oil and Gas</option>
+                        <option>Marketing</option>
+                        <option>Banking</option>
+                        <option>Logistics</option>
+                        <option>Training</option>
                         <option>Entertainment</option>
                     </select>
                     
@@ -140,7 +155,13 @@ function isLoggedIn()
 
                     <label for="">What stage of development are you?</label>
                     <select name="" id="" class="field dev_stage">
-                        <option>Final stage</option>
+                        <option>Market survey and analysis</option>
+                        <option>Business development</option>
+                        <option>Idea Testing</option>
+                        <option>Branding</option>
+                        <option>Scouting for Investment</option>
+                        <option>Beta Testing</option>
+                        <option>About to Launch</option>
                     </select>
 
                     <label for="">Is your business or product currently making revenue(if yes, how much)?</label>
@@ -180,7 +201,11 @@ function isLoggedIn()
 
                     <label for="">What marketing channel is your product currently using?</label>
                     <select name="" id="" class="field marketing_channel">
-                        <option>Social Media</option>
+                        <option>Social media</option>
+                        <option>Affiliate marketing</option>
+                        <option>Direct offline</option>
+                        <option>Content marketing</option>
+                        <option>Digital marketing</option> 
                     </select>
 
                     <label for="">Have you ever received an investment in your business?</label>

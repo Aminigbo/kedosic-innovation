@@ -94,9 +94,7 @@ function isLoggedIn()
                     <input type="text" class="field bus_name">
 
                     <label for="">Where is your business currently headquatered or located?</label>
-                    <select name="" id="" class="field headquatered">
-                        <option>Abuja</option>
-                    </select>
+                    <input name="" id="" class="field headquatered"> 
 
                     <label for="">How old is your business in months</label>
                     <input type="text" class="field bus_age">
@@ -156,13 +154,28 @@ function isLoggedIn()
 
                     <label for="">What kind of product is it?</label>
                     <select name="" id="" class="field product_kind">
-                        <option>Mobile App</option>
+                    <option value="Website">Website</option>
+                        <option value="Mobile app">Mobile app</option>
+                        <option value="Desktop app">Desktop app</option>
+                        <option value="Online based software">Online based software</option>
+                        <option value="Offline based software">Offline based software</option>
+                        <option value="Tech services ">Tech services </option>
+                        <option value="Marketing ">Marketing </option>
+                        <option value="Training ">Training </option>
                     </select>
 
 
                     <label for="">Select the area you are targeting?</label>
                     <select name="" id="" class="field target">
-                        <option>Lagos</option>
+                    <option value="Ecommerce"></option>
+                        <option value="Education Service">Education Service</option>
+                        <option value="FInance">FInance</option>
+                        <option value="Crowd Funding">Crowd Funding</option>
+                        <option value="Transportation">Transportation</option>
+                        <option value="Logistic">Logistic</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Training">Training</option>
+                        <option value="Entertainment">Entertainment</option>
                     </select>
 
 
@@ -194,6 +207,8 @@ function isLoggedIn()
                     <label for="">How many persons are in your team</label>
                     <select name="" id="" class="field team_no">
                         <option>1 - 5</option>
+                        <option>6 - 15</option>
+                        <option>Above</option> 
                     </select>
 
                     <label for="">Do you have your partner's consent to be part of this program?</label>

@@ -97,13 +97,31 @@ function isLoggedIn()
                     <label for="">What kind of product is it?</label>
                     <select name="" id="" class="field product_kind">
                         <option value="">[Select type]</option>
-                        <option value="Tech">Tech</option>
+                        <option value="Website">Website</option>
+                        <option value="Mobile app">Mobile app</option>
+                        <option value="Desktop app">Desktop app</option>
+                        <option value="Online based software">Online based software</option>
+                        <option value="Offline based software">Offline based software</option>
+                        <option value="Tech services ">Tech services </option>
+                        <option value="Marketing ">Marketing </option>
+                        <option value="Training ">Training </option>
+                        
+
                     </select>
 
                     <label for="">Select the area you are targeting?</label>
                     <select name="" id="" class="field targeting">
-                        <option  value="">[Select region]</option>
-                        <option value="Tech">Tech</option>
+                        <option  value="">[Select Target Area]</option>
+                        <option value="Ecommerce"></option>
+                        <option value="Education Service">Education Service</option>
+                        <option value="FInance">FInance</option>
+                        <option value="Crowd Funding">Crowd Funding</option>
+                        <option value="Transportation">Transportation</option>
+                        <option value="Logistic">Logistic</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Training">Training</option>
+                        <option value="Entertainment">Entertainment</option> 
+                        
                     </select>
 
                     <!-- <label for="">Message?</label>
@@ -131,7 +149,13 @@ function isLoggedIn()
                     <label for="">What stage of development are you?</label>
                     <select name="" id="" class="field develop_stage">
                         <option value="">[Select stage]</option>
-                        <option value="bus_plan">Business Plan</option>
+                        <option value="bus_plan">Product documentation</option>
+                        <option value="bus_plan">UI?UX Development</option>
+                        <option value="bus_plan">Frontend Development</option>
+                        <option value="bus_plan">Backend Development</option>
+                        <option value="bus_plan">Alpha Testing</option>
+                        <option value="bus_plan">Beta Testing</option>
+                        <option value="bus_plan">Launch</option>
                     </select>  
 
                     <div class="btns-container">
